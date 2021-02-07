@@ -933,4 +933,7 @@
     <!-- Adjust dividers if needed (usually 1000 for millidegrees, 10 for decidegrees) -->
     <integer name="config_cpu_temp_divider">1000</integer>
 
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">120</integer>
+
 </resources>
