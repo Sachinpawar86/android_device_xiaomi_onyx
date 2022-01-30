@@ -142,6 +142,10 @@ vendor.gralloc.disable_ubwc=0
 vendor.gralloc.enable_logs=0
 vendor.gralloc.enable_snapalloc=1
 
+# HWUI
+debug.hwui.target_cpu_time_percent=30
+debug.hwui.use_hint_manager=true
+
 # Incremental FS
 ro.incremental.enable=yes
 
