@@ -102,6 +102,7 @@ debug.sf.use_phase_offsets_as_durations=1
 graphics.gpu.profiler.support=true
 persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
+persist.sys.sf.native_mode=258
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sun.api35
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
