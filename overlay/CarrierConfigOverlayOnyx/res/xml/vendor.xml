@@ -48,6 +48,7 @@
         <boolean name="carrier_call_progress_notification" value="true" />
         <boolean name="dtmf_type_enabled_bool" value="true" />
         <boolean name="csp_enabled_bool" value="true" />
+		<boolean name="hide_lte_plus_data_icon_bool" value="false" />
         <int-array name="supported_sms_rp_cause_values_int_array" num="4">
             <item value="38" />
             <item value="41" />
