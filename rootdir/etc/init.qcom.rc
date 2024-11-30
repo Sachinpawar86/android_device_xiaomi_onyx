@@ -536,6 +536,9 @@ on property:sys.boot_completed=1
     write /dev/kmsg "start qrtr-lookup after Boot completed "
     start qrtr-lookup
 
+     # Stop statsd
+    stop statsd
+
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
 
