@@ -922,4 +922,7 @@
     <!-- Adjust dividers if needed (usually 1000 for millidegrees, 10 for decidegrees) -->
     <integer name="config_cpu_temp_divider">1000</integer>
 
+    <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
+    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.8</item>
+
 </resources>
