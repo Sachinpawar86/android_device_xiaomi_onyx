@@ -70,6 +70,9 @@ on early-init
     export ADSP_LIBRARY_PATH /odm/lib/rfsa/adsp;/vendor/lib/rfsa/adsp/;/system/lib/rfsa/adsp;/system/vendor/lib/rfsa/adsp;/dsp
     # set tcp_mtu_probing to 1
     write /proc/sys/net/ipv4/tcp_mtu_probing 1
+	
+	# set ro.boot.hardware.revision property
+	setprop ro.boot.hardware.revision ${ro.boot.hwc}_${ro.boot.hwlevel}_${ro.boot.hwversion}
 
 on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -755,3 +758,4 @@ service vendor.audio-hal-aidl /vendor/bin/hw/audiohalservice.qti
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     socket audio_us_socket_0 seqpacket 0666 system system
     onrestart restart audioserver
+	
