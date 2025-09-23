@@ -35,6 +35,11 @@
             android:permission="TouchReportRateService">
         </service>
 
+        <service
+            android:name=".display.ColorService"
+            android:permission="ColorService">
+        </service>
+
         <activity
             android:name=".touch.TouchSettingsActivity"
             android:configChanges="orientation|screenSize"
