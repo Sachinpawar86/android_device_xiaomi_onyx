@@ -115,7 +115,7 @@ PRODUCT_COPY_FILES += \
 	$(PREBUILT_PATH)/images/kernel:kernel
 
 # Kernel modules
-GKI_VERSION := 6.6.56-android15-8-gf7d505beab1f-ab13294489-4k
+GKI_VERSION := 6.6.77-android15-8-g4a507830d890-ab13636293-4k
 DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_dlkm
 RAMDISK_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_boot
 SYSTEM_DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/system_dlkm/$(GKI_VERSION)
