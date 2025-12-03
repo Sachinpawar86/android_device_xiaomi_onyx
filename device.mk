@@ -255,6 +255,10 @@ $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles_tuna_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_tuna_v0.xml
 
+# Lineage Interfaces
+PRODUCT_PACKAGES += \
+    framework_compatibility_matrix.lineage.xml
+
 # Memtrack
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
