@@ -909,4 +909,8 @@
 
     <!-- Maximum velocity to initiate a fling, as measured in dips per second. -->
     <dimen name="config_viewMaxFlingVelocity">12000dp</dimen>
+	
+    <!-- System Info -->
+    <integer name="config_sysCPUTempMultiplier">1000</integer>
+    
 </resources>

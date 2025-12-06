@@ -23,6 +23,9 @@ persist.device_config.lmkd.enable_pressure_events=true
 persist.device_config.lmkd.kill_heaviest_task=true
 persist.device_config.per_app_mem.reclaim_enabled=true
 
+# Maintainer
+ro.paranoid.maintainer=Sachin_07
+
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60

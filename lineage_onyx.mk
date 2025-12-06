@@ -13,6 +13,21 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from onyx device
 $(call inherit-product, device/xiaomi/onyx/device.mk)
 
+# Lunaris Build Flags
+LUNARIS_BUILD_TYPE := OFFICIAL
+WITH_BCR := true
+TARGET_ENABLE_BLUR := true
+TARGET_CUSTOM_UDFPS := true
+TORCH_STR_SUPPORTED := true
+TARGET_USES_CORE_GAPPS := true
+TARGET_OPTIMIZED_DEXOPT := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := false
+TARGET_SUPPORTS_GOOGLE_FILES := false
+TARGET_DEFAULT_PIXEL_LAUNCHER := false
+TARGET_SUPPORTS_GOOGLE_TELEPHONY := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+
 PRODUCT_NAME := lineage_onyx
 PRODUCT_DEVICE := onyx
 PRODUCT_MANUFACTURER := Xiaomi
@@ -21,10 +36,6 @@ PRODUCT_MODEL := 25053PC47G
 PRODUCT_SYSTEM_NAME := onyx_global
 PRODUCT_SYSTEM_DEVICE := onyx
 
-# Flags
-EXTRA_UDFPS_ANIMATIONS := true
-TARGET_HAS_UDFPS := true
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="onyx_global-user 15 AQ3A.250107.001 OS2.0.204.0.VOLMIXM release-keys" \
     BuildFingerprint=POCO/onyx_global/onyx:15/AQ3A.250107.001/OS2.0.204.0.VOLMIXM:user/release-keys \
@@ -32,9 +43,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-RISING_MAINTAINER := K4LCHAKRA x ROMGHARTI
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingMaintainer="K4LCHAKRA x ROMGHARTI" \
-    RisingChipset="Snapdragon 8s Gen 4"
