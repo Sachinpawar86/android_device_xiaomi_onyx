@@ -34,3 +34,9 @@ on property:vendor.post_boot.parsed=1
     # IRQ Tuning
     # IRQ 326: msm_drm -> CPU 7
     write /proc/irq/326/smp_affinity_list 7
+
+    # Battery Saving Tweak
+    write /proc/sys/kernel/perf_cpu_time_max_percent 5
+    write /proc/sys/vm/dirty_writeback_centisecs 3000
+    write /proc/sys/vm/dirty_ratio 30
+    write /proc/sys/vm/stat_interval 10
