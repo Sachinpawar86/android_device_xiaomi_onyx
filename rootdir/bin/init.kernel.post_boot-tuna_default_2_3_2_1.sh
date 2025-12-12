@@ -247,7 +247,7 @@ do
 	echo 2726 > $ddrprime/freq_scale_ceil_mhz
 done
 
-echo s2idle > /sys/power/mem_sleep
+echo deep > /sys/power/mem_sleep
 echo N > /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled
 
 echo 4 > /proc/sys/kernel/printk
