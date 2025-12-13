@@ -1,1 +1,3 @@
 allow system_app proc_htsr:file { read write open getattr };
+# Aware
+get_prop(system_app, vendor_aware_available_prop);
