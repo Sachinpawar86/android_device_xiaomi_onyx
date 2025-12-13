@@ -903,4 +903,7 @@
 
     <!-- Preferred max refresh rate at keyguard, if supported by the display. -->
     <integer name="config_keyguardMaxRefreshRate">60</integer>
+
+    <!-- True if the device supports Sustained Performance Mode -->
+    <bool name="config_sustainedPerformanceModeSupported">true</bool>
 </resources>
