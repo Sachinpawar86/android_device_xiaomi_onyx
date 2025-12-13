@@ -15,6 +15,13 @@ persist.backup.ntpServer=0.pool.ntp.org
 debug.hwui.skia_tracing_enabled=false
 debug.hwui.skia_use_perfetto_track_events=false
 
+# Infinity-X
+ro.infinity.soc=Snapdragon® 8s Gen 4
+ro.infinity.battery=7550 mAh
+ro.infinity.display=1280 x 2772, 120Hz
+ro.infinity.camera=50/8MP & 20MP
+ro.product.marketname=POCO F7
+
 # LMKD
 persist.device_config.lmkd_native.thrashing_limit=30
 persist.device_config.lmkd_native.thrashing_limit_decay=10
