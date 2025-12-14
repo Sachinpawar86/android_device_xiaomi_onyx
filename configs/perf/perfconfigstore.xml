@@ -32,24 +32,18 @@ ________________________________________________________________________________
     <PerfConfigs>
 
                 <!--Vendor Properties -->
-                <!-- MIUI ADD: Performance_BoostFramework -->
-                <Prop Name="vendor.iop.enable_uxe" Value="0" />
-                <!-- END Performance_BoostFramework -->
+                <!-- AOSPA Edit: Comment out IOP
+                <Prop Name="vendor.iop.enable_uxe" Value="0" /> -->
                 <Prop Name="vendor.debug.enable.lm" Value="true" />
-                <Prop Name="vendor.enable.prefetch" Value="false" />
-                <Prop Name="vendor.iop.enable_speed" Value="false" /> <!--rename to perf-->
+                <!-- AOSPA Edit: Comment out IOP
+                <Prop Name="vendor.enable.prefetch" Value="false" /> -->
+                <Prop Name="vendor.iop.enable_speed" Value="true" /> <!--rename to perf-->
                 <Prop Name="vendor.perf.fps_switch_hyst_time_secs" Value="10" />
                 <Prop Name="ro.vendor.perf.enable.prekill"        Value="true" />
                 <Prop Name="ro.vendor.perf.enable.procomp" Value="true" />
-                <!-- MIUI MOD: Performance_BoostFramework -->
-                <Prop Name="ro.vendor.perf.enable.prefapps" Value="false" />
                 <!-- END Performance_BoostFramework -->
                 <Prop Name="vendor.prekill_MIN_ADJ_to_Kill" Value="800" />
                 <Prop Name="vendor.prekill_MAX_ADJ_to_Kill" Value="1000" />
-                <Prop Name="ro.vendor.perf.count.prefapps" Value="12" />
-                <Prop Name="ro.vendor.use_perf_hal_for_preferredapps" Value="true" />
-                <Prop Name="vendor.prefapps.pkg_retention_mins" Value="28800" />
-                <Prop Name="vendor.prefapps.last_launch_threshold" Value="21600" />
                 <Prop Name="vendor.debug.enable.memperfd"         Value="true" />
                 <Prop Name="vendor.enable.memperfd_MIN_RAM_in_KB" Value="1048576" />
                 <Prop Name="vendor.enable.memperfd_MAX_RAM_in_KB" Value="15728640" />
@@ -134,6 +128,13 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.qti.sys.fw.trim_empty_percent"           Value="100" />
                 <Prop Name="ro.vendor.qti.sys.fw.trim_cache_percent"           Value="100" />
                 <Prop Name="ro.vendor.qti.sys.fw.trim_enable_memory"           Value="4294967296"/>
+
+                <!-- AOSPA Edit: Enable Preferred Apps -->
+                <Prop Name="ro.vendor.perf.enable.prefapps" Value="true" />
+                <Prop Name="ro.vendor.perf.count.prefapps" Value="12" />
+                <Prop Name="ro.vendor.use_perf_hal_for_preferredapps" Value="true" />
+                <Prop Name="vendor.prefapps.pkg_retention_mins" Value="28800" />
+                <Prop Name="vendor.prefapps.last_launch_threshold" Value="21600" />
 
     </PerfConfigs>
 </PerfConfigsStore>
