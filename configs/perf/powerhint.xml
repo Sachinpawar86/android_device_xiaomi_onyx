@@ -4440,5 +4440,10 @@
             0x5FC04000, 0x7F,
             0X43C2C000, 512
             "/>
+        <!-- Expensive Rendering -->
+        <!-- GPU MIN_FREQUENCY resource opcode,value -->
+        <Config
+            Id="0x000010A5" Enable="true" Timeout="0" Target="sun"
+            Resources="0x42804000, 3"/>
     </Powerhint>
 </HintConfigs>
