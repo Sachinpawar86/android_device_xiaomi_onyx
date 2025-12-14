@@ -58,7 +58,7 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.perf.silkyscrolls_lite" Value="true" Target="tuna,kera"/>
                 <Prop Name="ro.vendor.perf.lighteninglaunches_lite" Value="true" Target="tuna,kera"/>
                 <Prop Name="ro.vendor.self_boost.enable" Value="false" Target="tuna"/>
-
+                <Prop Name="vendor.perf.expensive_rendering" Value="1" Target="sun" />
 
                 <!--System Properties -->
                 <!--LMKD Properties -->
