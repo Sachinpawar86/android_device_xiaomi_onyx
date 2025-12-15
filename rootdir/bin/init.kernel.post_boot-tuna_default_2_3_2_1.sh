@@ -18,13 +18,21 @@ echo $sched_rt_period_us > /proc/sys/kernel/sched_rt_period_us
 echo $sched_rt_runtime_us > /proc/sys/kernel/sched_rt_runtime_us
 
 if [ -d /proc/sys/walt ]; then
-        # Switch to kyber scheduler
-        echo "kyber" > /sys/block/sda/queue/scheduler
-        echo "kyber" > /sys/block/sdb/queue/scheduler
-        echo "kyber" > /sys/block/sdc/queue/scheduler
-        echo "kyber" > /sys/block/sdd/queue/scheduler
-        echo "kyber" > /sys/block/sde/queue/scheduler
-        echo "kyber" > /sys/block/sdf/queue/scheduler
+	# Switch to kyber scheduler
+	echo "kyber" > /sys/block/sda/queue/scheduler
+	echo "kyber" > /sys/block/sdb/queue/scheduler
+	echo "kyber" > /sys/block/sdc/queue/scheduler
+	echo "kyber" > /sys/block/sdd/queue/scheduler
+	echo "kyber" > /sys/block/sde/queue/scheduler
+	echo "kyber" > /sys/block/sdf/queue/scheduler
+
+	# nr_requests
+	echo 256 > /sys/block/sda/queue/nr_requests
+	echo 256 > /sys/block/sdb/queue/nr_requests
+	echo 256 > /sys/block/sdc/queue/nr_requests
+	echo 256 > /sys/block/sdd/queue/nr_requests
+	echo 256 > /sys/block/sde/queue/nr_requests
+	echo 256 > /sys/block/sdf/queue/nr_requests
 
 	# configure maximum frequency when CPUs are partially halted
 	echo 1190400 > /proc/sys/walt/sched_max_freq_partial_halt
