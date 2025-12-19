@@ -2812,6 +2812,9 @@ vendor/etc/media_codecs_tuna_v0.xml
 vendor/etc/media_codecs_tuna_v0_without_dvenc.xml
 vendor/etc/media_tuna_v0/video_system_specs.json
 
+# Misc
+system_ext/lib64/libbeluga.so
+
 # Mlipay
 odm/bin/mlipayd
 odm/etc/init/vendor.xiaomi.hardware.mlipay-service.rc
