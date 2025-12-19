@@ -61,17 +61,21 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml': blob_fixup()
         .regex_replace(r'(?s)^.*?(?=<manifest)', ''),
+
     'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
         .add_needed('libgui_shim.so'),
+
     'system_ext/lib64/libwfdnative.so': blob_fixup()
         .add_needed('libbinder_shim.so')
         .add_needed('libinput_shim.so')
         .remove_needed('android.hidl.base@1.0.so'),
+
     (
         'odm/etc/camera/enhance_motiontuning.xml',
-        'odm/etc/camera/motiontuning.xml'
+        'odm/etc/camera/motiontuning.xml',
     ): blob_fixup()
         .regex_replace('xml=version', 'xml version'),
+
     (
         'odm/bin/hw/android.hardware.security.keymint-service.strongbox-nxp',
         'odm/lib64/libjc_keymint-nxp.so',
@@ -79,7 +83,7 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libkeymint_empty-nxp.so',
         'odm/lib64/libkeymint_empty-thales.so',
         'vendor/bin/hw/android.hardware.security.keymint-service-qti',
-        'vendor/lib64/libqtikeymint.so'
+        'vendor/lib64/libqtikeymint.so',
     ): blob_fixup()
         .replace_needed(
             'android.hardware.security.keymint-V3-ndk.so',
@@ -88,19 +92,21 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libcppbor_external.so',
             'libcppbor_onyx.so'
-        ),
+    ),
+
     (
         'odm/lib64/libaudioroute_ext.so',
         'vendor/lib64/libagm.so',
         'vendor/lib64/libar-pal.so',
         'vendor/lib64/libmcs.so',
         'vendor/lib64/libmikaraoke.so',
-        'vendor/lib64/libtiantongpal.so'
+        'vendor/lib64/libtiantongpal.so',
     ): blob_fixup()
         .replace_needed(
             'libaudioroute.so',
             'libaudioroute-v34.so'
-        ),
+    ),
+
     (
         'odm/bin/hw/vendor.xiaomi.hw.touchfeature-service',
         'odm/lib64/hw/displayfeature.default.so',
@@ -117,12 +123,14 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libsre.so',
         'odm/lib64/libtruetone.so',
         'odm/lib64/libvideomode.so',
-        'vendor/lib64/libgnss.so'
+        'vendor/lib64/hw/camera.qcom.so',
+        'vendor/lib64/libgnss.so',
     ): blob_fixup()
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
             'android.hardware.sensors-V3-ndk.so',
-        ),
+    ),
+
     'odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl': blob_fixup()
         .replace_needed(
             'android.hardware.graphics.common-V5-ndk.so',
@@ -131,19 +139,23 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
             'android.hardware.sensors-V3-ndk.so'
-        ),
+    ),
+
     'vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc': blob_fixup()
         .regex_replace('odm/bin', 'vendor/bin'),
+
     (
         'vendor/etc/media_codecs_tuna_v0.xml',
-        'vendor/etc/media_codecs_tuna_v0_without_dvenc.xml'
+        'vendor/etc/media_codecs_tuna_v0_without_dvenc.xml',
     ): blob_fixup()
         .regex_replace('.*media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio).*\n', ''),
+
     'vendor/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service': blob_fixup()
         .replace_needed(
             'android.hardware.vibrator-V1-ndk_platform.so',
             'android.hardware.vibrator-V1-ndk_prebuilt.so'
-        ),
+    ),
+
     (
         'vendor/lib64/com.qti.feature2.afbrckt.so',
         'vendor/lib64/com.qti.feature2.anchorsync.so',
@@ -180,48 +192,45 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/com.qualcomm.mcx.policy.mfl.so',
         'vendor/lib64/com.qualcomm.mcx.policy.sfl.so',
         'vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so',
+        'vendor/lib64/hw/camera.qcom.so',
         'vendor/lib64/hw/com.qti.chi.offline.so',
         'vendor/lib64/libcameraopt.so',
         'vendor/lib64/libcamxcommonutils.so',
         'vendor/lib64/libcamxsettingsmanager.so',
         'vendor/lib64/libmicamera_adapter.so',
         'vendor/lib64/libmicamera_aidl_device.so',
-        'vendor/lib64/libmicamera_hal_core.so'
+        'vendor/lib64/libmicamera_hal_core.so',
     ): blob_fixup()
-        .binary_regex_replace(
-            b'ro.build.product',
-            b'ro.vendor.camera'
-        ),
+        .binary_regex_replace(b'ro.build.product', b'ro.vendor.camera'),
+
     'vendor/lib64/hw/camera.qcom.so': blob_fixup()
-        .binary_regex_replace(
-            b'ro.build.product',
-            b'ro.vendor.camera')
+        .binary_regex_replace(b'ro.build.product', b'ro.vendor.camera')
         .replace_needed(
             'android.hardware.sensors-V2-ndk.so',
             'android.hardware.sensors-V3-ndk.so',
-        ),
+    ),
+
     (
         'vendor/lib64/hw/com.qti.chi.override.so',
-        'vendor/lib64/libchifeature2.so'
+        'vendor/lib64/libchifeature2.so',
     ): blob_fixup()
-        .binary_regex_replace(
-            b'ro.build.product',
-            b'ro.vendor.camera'
-        )
+        .binary_regex_replace(b'ro.build.product', b'ro.vendor.camera')
         .replace_needed(
             'android.hardware.graphics.allocator-V1-ndk.so',
             'android.hardware.graphics.allocator-V2-ndk.so',
-        ),
+    ),
+
     (
         'vendor/lib64/camera/components/com.qti.node.dewarp.so',
         'vendor/lib64/libcamximageformatutils.so',
         'vendor/lib64/libqvrservice.so',
-        'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so'
+        'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so',
     ): blob_fixup()
         .replace_needed(
             'android.hardware.graphics.allocator-V1-ndk.so',
-            'android.hardware.graphics.allocator-V2-ndk.so'
-        ),
+            'android.hardware.graphics.allocator-V2-ndk.so',
+    ),
+
     'vendor/lib64/hw/libaudiocorehal.qti.so': blob_fixup()
         .replace_needed(
             'android.hardware.audio.core.sounddose-V1-ndk.so',
@@ -235,6 +244,7 @@ blob_fixups: blob_fixups_user_type = {
             'libaudio_aidl_conversion_common_ndk.so',
             'libaudio_aidl_conversion_common_ndk_prebuilt.so'
         ),
+
     'vendor/lib64/libaudioserviceexampleimpl.so': blob_fixup()
         .replace_needed(
             'android.media.audio.common.types-V4-ndk.so',
@@ -252,33 +262,36 @@ blob_fixups: blob_fixups_user_type = {
             'libaudio_aidl_conversion_common_ndk.so',
             'libaudio_aidl_conversion_common_ndk_prebuilt.so'
         ),
+
     'vendor/lib64/android.hardware.bluetooth.audio-impl_prebuilt.so': blob_fixup()
         .replace_needed(
             'libbluetooth_audio_session_aidl.so',
             'libbluetooth_audio_session_aidl_prebuilt.so'
         ),
+
     'vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so': blob_fixup()
         .replace_needed(
             'android.media.audio.common.types-V4-ndk.so',
             'android.media.audio.common.types-V3-ndk.so'
         ),
+
     'vendor/lib64/libcameraopt.so': blob_fixup()
         .add_needed('libprocessgroup_shim.so')
-        .binary_regex_replace(
-            b'ro.build.product',
-            b'ro.vendor.camera'
-        ),
+        .binary_regex_replace(b'ro.build.product', b'ro.vendor.camera'),
+
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
         .add_needed('libcodec2_shim.so')
         .replace_needed(
             'android.hardware.graphics.common-V5-ndk.so',
             'android.hardware.graphics.common-V6-ndk.so'
-        ),
+    ),
+
     'vendor/lib64/libwfdmmsrc_proprietary.so': blob_fixup()
         .replace_needed(
             'android.media.audio.common.types-V2-ndk.so',
-            'android.media.audio.common.types-V3-ndk.so'
-        ),
+            'android.media.audio.common.types-V3-ndk.so',
+    ),
+
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
 }  # fmt: skip
