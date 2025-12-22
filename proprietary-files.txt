@@ -2814,6 +2814,7 @@ vendor/etc/media_tuna_v0/video_system_specs.json
 
 # Misc
 system_ext/lib64/libbeluga.so
+system_ext/lib64/libskewknob_system.so
 
 # Mlipay
 odm/bin/mlipayd
