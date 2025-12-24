@@ -31,10 +31,6 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuctl/rt/cpu.shares 20480
     write /dev/cpuctl/top-app/cpu.shares 20480
 
-    # IRQ Tuning
-    # IRQ 326: msm_drm -> CPU 7
-    write /proc/irq/326/smp_affinity_list 7
-
     # Battery Saving Tweak
     write /proc/sys/kernel/perf_cpu_time_max_percent 5
     write /proc/sys/vm/dirty_writeback_centisecs 3000
