@@ -1,2 +1,4 @@
 # Camera
 allow platform_app vendor_displayfeature_prop:file read;
+
+get_prop(platform_app, vendor_camera_p3enable_prop)
