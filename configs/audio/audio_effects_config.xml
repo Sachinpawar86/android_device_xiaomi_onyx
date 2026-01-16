@@ -25,8 +25,6 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <library name="dvl" path="libdlbvolaidl.so"/>
         <!--DOLBY SPATIALIZER-->
         <library name="spatializer" path="libswspatializeraidl.so"/>
-        <!--DOLBY GAME-->
-        <library name="gamedap" path="libswgamedapaidl.so"/>
     </libraries>
 
     <effects>
@@ -70,7 +68,6 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <effect name="dynamics_processing" library="dynamics_processing" uuid="e0e6539b-1781-7261-676f-6d7573696340"/>
         <effect name="aec" library="audio_pre_processing" uuid="0f8d0d2a-59e5-45fe-b6e4-248c8a799109"/>
         <effect name="ns" library="audio_pre_processing" uuid="1d97bb0b-9e2f-4403-9ae3-58c2554306f8"/>
-        <effect name="music_helper" library="volume_listener" uuid="08b8b058-0590-11e5-ac71-0025b32654a0"/>
         <effect name="ring_helper" library="volume_listener" uuid="0956df94-0590-11e5-bdbe-0025b32654a0"/>
         <effect name="alarm_helper" library="volume_listener" uuid="09f303e2-0590-11e5-8fdb-0025b32654a0"/>
         <effect name="voice_helper" library="volume_listener" uuid="0ace5c08-0590-11e5-ae9e-0025b32654a0"/>
@@ -85,9 +82,6 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <effect name="dlb_alarm_listener" library="dvl" uuid="6aff229c-30c6-4cc8-9957-dbfe5c1bd7f6"/>
         <!--DOLBY SPATIALIZER-->
         <effect name="spatializer" library="spatializer" uuid="ccd4cf09-a79d-46c2-9aae-06a1698d6c8f"/>
-        <!--DOLBY GAME-->
-        <effect name="gamedap" library="gamedap" uuid="3783c334-d3a0-4d13-874f-0032e5fb80e2"/>
-        <!--DOLBY END-->
     </effects>
 
     <postprocess>
