@@ -35,7 +35,7 @@ PRODUCT_SYSTEM_DEVICE := onyx
 
 # Flags
 EXTRA_UDFPS_ANIMATIONS := true
-TARGET_HAS_UDFPS := true
+TARGET_CUSTOM_UDFPS := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="onyx_global-user 15 AQ3A.250226.002 OS3.0.5.0.WOLMIXM release-keys" \
