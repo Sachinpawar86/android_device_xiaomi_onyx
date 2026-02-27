@@ -4,5 +4,4 @@ get_prop(system_app, vendor_aware_available_prop);
 allow system_app proc_htsr:file { read write open getattr };
 
 # Color
-hal_client_domain(system_app, vendor_hal_displayfeature)
-binder_call(system_app, vendor_hal_displayfeature)
+hal_client_domain(system_app, vendor_hal_displayfeature_xiaomi)
