@@ -200,7 +200,7 @@ on post-fs-data
 
     chmod 0666 /dev/metis
     restorecon /dev/metis
-    chown 0666 /sys/module/metis/parameters
+    chmod 0666 /sys/module/metis/parameters
     chmod 0664 /sys/module/metis/parameters/add_rebind_task_lit
     chmod 0664 /sys/module/metis/parameters/add_rebind_task_mid
     chmod 0664 /sys/module/metis/parameters/add_rebind_task_big
