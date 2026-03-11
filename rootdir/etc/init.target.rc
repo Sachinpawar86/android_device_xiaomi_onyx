@@ -78,7 +78,8 @@ on init
     chmod 0660 /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
 
     # Initial uhid
-    chmod 0666 /dev/uhid
+    chmod 0660 /dev/uhid
+    chown system system /dev/uhid
 
 on early-fs
     start vold
