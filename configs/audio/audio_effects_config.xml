@@ -95,10 +95,12 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <!-- <apply effect="music_helper"/> -->
             <apply effect="dlb_music_listener"/>
         </stream>
-        <!-- <stream type="ring">
+        <stream type="ring">
+            <apply effect="dlb_ring_listener"/>
             <apply effect="ring_helper"/>
         </stream>
         <stream type="alarm">
+            <apply effect="dlb_alarm_listener"/>
             <apply effect="alarm_helper"/>
         </stream>
         <stream type="voice_call">
@@ -106,7 +108,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         </stream>
         <stream type="notification">
             <apply effect="notification_helper"/>
-        </stream> -->
+        </stream>
     </postprocess>
     <preprocess>
         <stream type="voice_communication">
