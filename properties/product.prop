@@ -30,6 +30,20 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.vcp.controller.enabled=false
 
+# LMKD
+ro.lmk.use_psi=true
+ro.lmk.kill_heaviest_task=true
+ro.lmk.use_minfree_levels=false
+ro.lmk.low=1001
+ro.lmk.medium=850
+ro.lmk.critical=0
+ro.lmk.psi_partial_stall_ms=60
+ro.lmk.psi_complete_stall_ms=700
+ro.lmk.swap_util_max=60
+ro.lmk.swap_free_low_percentage=20
+ro.lmk.kill_timeout_ms=100
+ro.lmk.downgrade_pressure=40
+
 # Phantom process monitoring
 persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
