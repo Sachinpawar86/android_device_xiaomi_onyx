@@ -32,6 +32,14 @@ if [ "$osversion" != "3.0" ]; then
 	esac
 fi
 if [ -d /proc/sys/walt ]; then
+	# nr_requests
+	echo 256 > /sys/block/sda/queue/nr_requests
+	echo 256 > /sys/block/sdb/queue/nr_requests
+	echo 256 > /sys/block/sdc/queue/nr_requests
+	echo 256 > /sys/block/sdd/queue/nr_requests
+	echo 256 > /sys/block/sde/queue/nr_requests
+	echo 256 > /sys/block/sdf/queue/nr_requests
+
 	# configure maximum frequency when CPUs are partially halted
 	echo 1190400 > /proc/sys/walt/sched_max_freq_partial_halt
 
