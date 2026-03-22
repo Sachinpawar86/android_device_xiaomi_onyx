@@ -26,7 +26,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 on early-init
-write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
     insmod /vendor/lib/modules/q6_pdr_dlkm.ko
     insmod /vendor/lib/modules/q6_notifier_dlkm.ko
     insmod /vendor/lib/modules/snd_event_dlkm.ko

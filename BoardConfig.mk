@@ -87,7 +87,8 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 BOARD_KERNEL_CMDLINE := \
     swinfo.fingerprint=$(LINEAGE_VERSION) \
     mtdoops.fingerprint=$(LINEAGE_VERSION) \
-    bootmonitor.fingerprint=$(LINEAGE_VERSION)
+    bootmonitor.fingerprint=$(LINEAGE_VERSION) \
+    sysctl.kernel.firmware_config.force_sysfs_fallback=1
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
