@@ -363,6 +363,10 @@ PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
 # Signing
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lunaris-priv/keys/releasekey
 
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
