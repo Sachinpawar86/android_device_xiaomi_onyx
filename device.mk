@@ -144,6 +144,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.config-V12-ndk.vendor  \
     vendor.qti.hardware.display.composer3-V1-ndk.vendor 
 
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey

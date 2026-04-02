@@ -16,9 +16,10 @@ $(call inherit-product, device/xiaomi/onyx/device.mk)
 # Lunaris Build Flags
 LUNARIS_BUILD_TYPE := OFFICIAL
 WITH_BCR := true
-TARGET_ENABLE_BLUR := true
-TORCH_STR_SUPPORTED := true
+TARGET_CUSTOM_UDFPS := true
 TARGET_OPTIMIZED_DEXOPT := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
 
 PRODUCT_NAME := lineage_onyx
 PRODUCT_DEVICE := onyx
@@ -28,10 +29,6 @@ PRODUCT_MODEL := 25053PC47G
 
 PRODUCT_SYSTEM_NAME := onyx_global
 PRODUCT_SYSTEM_DEVICE := onyx
-
-# Flags
-EXTRA_UDFPS_ANIMATIONS := true
-TARGET_CUSTOM_UDFPS := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="onyx_global-user 15 AQ3A.250226.002 OS3.0.6.0.WOLMIXM release-keys" \
