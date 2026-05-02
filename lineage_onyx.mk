@@ -16,6 +16,7 @@ $(call inherit-product, device/xiaomi/onyx/device.mk)
 # Lunaris Build Flags
 LUNARIS_BUILD_TYPE := OFFICIAL
 WITH_BCR := true
+USE_REALITY_ENGINE := true
 TARGET_CUSTOM_UDFPS := true
 TARGET_OPTIMIZED_DEXOPT := true
 TARGET_BOOT_ANIMATION_RES := 1080
