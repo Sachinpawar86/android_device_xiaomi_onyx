@@ -96,7 +96,7 @@ if [ -d /proc/sys/walt ]; then
 	echo 0x60 > /proc/sys/walt/sched_sbt_pause_cpus
 
 	# Report max frequency to unity tasks.
-	echo "UnityMain,libunity.so,libil2cpp.so,com.miHoYo.,com.pubg.imobile,com.pubg.,com.activision." > /proc/sys/walt/sched_lib_name
+	echo "UnityMain,libunity.so,libil2cpp.so,com.miHoYo.,com.pubg.imobile,com.pubg.,com.activision.,com.mobilechess.gp,com.mobile.legends" > /proc/sys/walt/sched_lib_name
 	echo 255 > /proc/sys/walt/sched_lib_mask_force
 
 	# Setting b.L scheduler parameters
