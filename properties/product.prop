@@ -31,6 +31,12 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.vcp.controller.enabled=false
 
+# IORapd
+iorapd.perfetto.enable=false
+iorapd.readahead.enable=false
+persist.device_config.runtime_native_boot.iorap_readahead_enable=false
+ro.iorapd.enable=false
+
 # Phantom process monitoring
 persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
