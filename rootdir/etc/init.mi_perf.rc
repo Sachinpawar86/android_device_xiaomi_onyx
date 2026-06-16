@@ -6,14 +6,6 @@
 on init
     copy_per_line /dev/cpuctl/tasks /dev/cpuctl/system/tasks
 
-on post-fs
-    setprop dalvik.vm.heapstartsize 24m
-    setprop dalvik.vm.heapgrowthlimit 384m
-    setprop dalvik.vm.heapsize 512m
-    setprop dalvik.vm.heaptargetutilization 0.42
-    setprop dalvik.vm.heapminfree 8m
-    setprop dalvik.vm.heapmaxfree 56m
-
 on boot
     chown system system /dev/cpuset/cgroup.procs
     chown system system /dev/cpuset/foreground/cgroup.procs
