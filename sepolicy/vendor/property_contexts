@@ -1,6 +1,7 @@
 # Audio
 persist.vendor.audio.cloud u:object_r:vendor_audio_cloud_ctrl_mi_prop:s0
 persist.vendor.audio.pa.smartpa_type u:object_r:vendor_audio_prop:s0
+ro.vendor.oplus.regionmark u:object_r:vendor_audio_debug_prop:s0
 
 # Aware
 ro.vendor.aware_available u:object_r:vendor_aware_available_prop:s0
