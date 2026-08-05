@@ -155,6 +155,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.config-V12-ndk.vendor  \
     vendor.qti.hardware.display.composer3-V1-ndk.vendor 
 
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -270,6 +273,10 @@ $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
 $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
+# Maintainer Flag
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.lunaris.maintainer=Sachin_07
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_tuna_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_tuna_v0.xml \
@@ -378,6 +385,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
+
+# Signing
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lunaris-priv/keys/releasekey
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

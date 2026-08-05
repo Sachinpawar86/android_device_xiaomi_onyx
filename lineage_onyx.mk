@@ -13,6 +13,15 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from onyx device
 $(call inherit-product, device/xiaomi/onyx/device.mk)
 
+# Lunaris Build Flags
+LUNARIS_BUILD_TYPE := OFFICIAL
+WITH_BCR := true
+USE_REALITY_ENGINE := true
+TARGET_CUSTOM_UDFPS := true
+TARGET_OPTIMIZED_DEXOPT := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
+
 PRODUCT_NAME := lineage_onyx
 PRODUCT_DEVICE := onyx
 PRODUCT_MANUFACTURER := Xiaomi
