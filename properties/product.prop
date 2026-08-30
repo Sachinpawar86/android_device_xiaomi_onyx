@@ -40,9 +40,6 @@ iorapd.readahead.enable=false
 persist.device_config.runtime_native_boot.iorap_readahead_enable=false
 ro.iorapd.enable=false
 
-# Phantom process monitoring
-persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
-
 # RKPD
 remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
