@@ -335,8 +335,10 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayOnyx \
     TelephonyOverlayOnyx \
     FrameworkOverlayOnyx \
+    FrameworkOverlayOnyxCN \
     FrameworkOverlayOnyxGL \
     LineageSDKOverlayOnyx \
+    LineageSDKOverlayOnyxCN \
     LineageSettingsOverlayOnyx \
     NfcOverlayOnyx \
     SettingsOverlayOnyx \
