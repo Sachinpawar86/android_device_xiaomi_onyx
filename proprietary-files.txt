@@ -2649,6 +2649,7 @@ vendor/firmware/gen80000_gmu.bin
 vendor/firmware/gen80000_sqe.fw
 vendor/firmware/gen80600_gmu.bin
 vendor/firmware/gmu_gen70900.bin
+vendor/etc/qgl_config.txt
 vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_32.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
@@ -2656,6 +2657,7 @@ vendor/gpu/kbc/unified_ksqs.bin
 
 # Hexlp
 vendor/bin/hexlpservice
+vendor/etc/init/init.qgl.rc
 vendor/etc/init/hexlpservice.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.hexlp-service.xml
 vendor/lib64/libnspdependencyservice.so
@@ -2674,6 +2676,7 @@ vendor/lib64/libnspschedulerservice.so
 vendor/lib64/libnspsessionservice.so
 vendor/lib64/libnsptransactionservice.so
 vendor/lib64/vendor.qti.hardware.hexlp-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.hexlp-V2-ndk.so
 
 # HDCP
 vendor/bin/hdcp1prov
