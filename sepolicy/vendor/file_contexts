@@ -163,3 +163,4 @@
 /data/vendor/mac_addr(/.*)? u:object_r:vendor_mac_vendor_data_file:s0
 /data/vendor/mbnconfig(/.*)? u:object_r:vendor_firmware_data_file:s0
 /vendor/bin/nv_mac u:object_r:vendor_wcnss_service_exec:s0
+/data/vendor/gpu/qgl_config\.txt u:object_r:same_process_hal_file:s0
